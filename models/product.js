@@ -6,7 +6,8 @@ const productSchema = new mongoose.Schema({
     type: String,
     model: String,
     image: String,
-    googleId: String
+    googleId: String,
+    user: {type: mongoose.Schema.Types.ObjectId, ref: 'User'}
   }, {
     timestamps: true
   });

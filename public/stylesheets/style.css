@@ -1,20 +1,49 @@
-.brand-logo {
-  margin-left: 15px;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+:root{
+  --clr-primary: #ff4942;
+  --clr-primaryHover: #686d83;
+  --clr-gray100: #f0f7f8;
+  --clr-gray200: #cfd8dc;
+
+  /* border radius */
+  --radius: .2rem;
 }
 
-.card .card-content .card-title {
-  margin-bottom: 10px;
+body{
+  font-family: Arial, sans-serif;
+  background-color: var(--clr-gray200);
 }
 
-#search-row form {
-  padding-top: 20px;
+.nav-list{
+  background-color: var(--clr-primary);
+  box-shadow: 0px 0px 10px var(--clr-gray200);
+  margin: 0;
+  padding: .125rem 0;
+  border-radius: var(--radius);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
-.student-name {
-  position: relative;
-  top: -5px;
+.nav-item{
+  list-style: none;
+  margin-right: 2rem;
 }
 
-.collection-item form {
-  margin-top: -5px;
+.nav-item a{
+  font-family: 'Montserrat', sans-serif;
+  font-size:1.2rem;
+  text-decoration: none;
+  color: white;
+}
+
+.nav-item:first-child{
+  margin-right: auto;
+  margin-left: 2rem;
+
+}
+
+#gearshare-logo{
+  height: 125px;
 }

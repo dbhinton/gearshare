@@ -53,7 +53,7 @@ app.use(function (req, res, next) {
 
 // mount all routes with appropriate base paths
 app.use('/', indexRouter);
-// app.use('/products', productRouter)
+app.use('/', productRouter)
 
 
 // invalid request, send 404 page
