@@ -20,7 +20,7 @@ require('./config/passport');
 
 //require index route
 const indexRouter = require('./routes/index');
-const productRouter = require('./routes/products')
+const productsRouter = require('./routes/products');
 
 
 // view engine setup
@@ -53,7 +53,7 @@ app.use(function (req, res, next) {
 
 // mount all routes with appropriate base paths
 app.use('/', indexRouter);
-app.use('/', productRouter)
+app.use('/', productsRouter);
 
 
 // invalid request, send 404 page

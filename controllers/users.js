@@ -1,10 +1,10 @@
 const User = require('../models/user')
 
 module.exports = {
-    home
+    index
 }
 
-function home(req, res, next){
+function index(req, res, next){
     console.log(req.user, "<--- req user")
     console.log(req.query)
     res.render('home/index', {

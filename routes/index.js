@@ -11,7 +11,7 @@ const usersCtrl = require('../controllers/users')
 
 
 // Controller Functions
-router.get("/", usersCtrl.home)
+router.get("/", usersCtrl.index)
 
 // Google OAuth login route
 router.get('/auth/google', passport.authenticate(

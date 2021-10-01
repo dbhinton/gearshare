@@ -1,3 +1,27 @@
-<body>
-    Products
-</body>
+<%- include('../partials/header') %> 
+
+<table id = list>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Model</th>
+            <th>Price</th>
+        </tr>
+        <tbody>
+            <% products.forEach(function(product){ %>
+             
+            <tr>
+                <td><%= product.name %></td>
+                <td><%= product.type %></td>
+                <td><%= product.model %></td>
+                <td><%= product.price %></td>
+
+            </tr>
+            <% }); %>
+        </tbody>
+    </thead>
+</table>
+
+
+<%- include('../partials/footer') %> 
