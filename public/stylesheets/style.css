@@ -11,9 +11,13 @@
 }
 
 body{
-  font-family: Arial, sans-serif;
-  background-color: var(--clr-gray200);
+  font-family: 'Montserrat', sans-serif;
+  background-color: white;
+  padding: 0;
+  margin: 0;
 }
+
+/* Nav Bar */
 
 .nav-list{
   background-color: var(--clr-primary);
@@ -24,6 +28,7 @@ body{
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  position: sticky;
 }
 
 .nav-item{
@@ -46,4 +51,28 @@ body{
 
 #gearshare-logo{
   height: 125px;
+}
+
+/* Body of Page */
+.cats{
+  max-width: 1200;
+  margin: 40px;
+  margin-top: 40px;
+  height: 40px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cat-item{
+  flex-grow: 1;
+  min-width: 33.33%;
+  border: 1px solid black;
+  box-sizing: border-box;
+  height: 300px;
+}
+
+@media(max-width: 1000px){
+  .cat-item{
+    min-width: 50%;
+  }
 }

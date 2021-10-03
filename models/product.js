@@ -6,8 +6,7 @@ const productSchema = new mongoose.Schema({
     type: String,
     model: String,
     image: String,
-    googleId: String,
-    user: {type: mongoose.Schema.Types.ObjectId, ref: 'User'}
+    ratings: {type: mongoose.Schema.Types.ObjectId, ref: "Comment"},
   }, {
     timestamps: true
   });
