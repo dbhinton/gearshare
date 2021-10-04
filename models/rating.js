@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const ratingSchema = new mongoose.Schema({
     content: String,
     rating: {type: Number, min: 1, max: 5, default: 5},
-    user: {type: mongoose.Schema.Types.ObjectId, ref: "User"}
+    users: [{type: mongoose.Schema.Types.ObjectId, ref: "User"}]
   }, {
     timestamps: true
   });
