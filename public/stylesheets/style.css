@@ -178,6 +178,10 @@ a{
   height: 220%;
 }
 
+.featured-products-title{
+  margin-top: 5%;
+  font-size: 2rem;
+}
 
 #featured-products{
   margin-top: 5%;
@@ -185,18 +189,13 @@ a{
   max-width: 1200px;
   margin: 0 auto;
   display: grid;
-
-
 }
 
-.featured-products-title{
-  margin-top: 5%;
-  font-size: 2rem;
-}
 
 .featured-product-item{
   border-bottom: 1px solid black;
   background-color: grey;
+  height: 300px;
 }
 
 

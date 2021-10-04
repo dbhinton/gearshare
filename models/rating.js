@@ -2,10 +2,9 @@ const mongoose = require('mongoose');
 
 // Create your User Model
 const ratingSchema = new mongoose.Schema({
-    name: String,
-    type: String,
-    email: String,
-    googleId: String
+    content: String,
+    rating: {type: Number, min: 1, max: 5, default: 5},
+    user: {type: mongoose.Schema.Types.ObjectId, ref: "User"}
   }, {
     timestamps: true
   });
