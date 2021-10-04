@@ -6,6 +6,8 @@ var cookieParser = require('cookie-parser');
 var session = require('express-session');
 var passport = require('passport');
 var methodOverride = require('method-override');
+const expressLayouts = require("express-ejs-layouts");
+
 
 // load the env vars
 require('dotenv').config();
@@ -26,9 +28,10 @@ const productsRouter = require('./routes/products');
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
-
+app.use(expressLayouts)
 app.use(methodOverride('_method'));
-app.use(express.static(path.join(__dirname, 'public')));
+// app.use(express.static(path.join(__dirname, 'public')));
+app.use('/public', express.static('public'))
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
