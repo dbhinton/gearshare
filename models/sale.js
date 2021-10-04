@@ -8,6 +8,7 @@ const saleSchema = new mongoose.Schema({
     zip: Number,
     country: String,
     productsSold: [{type: mongoose.Schema.Types.ObjectId, ref: "Product"}],
+    seller: {type: mongoose.Schema.Types.ObjectId, ref: "User"}
   }, {
     timestamps: true
   });

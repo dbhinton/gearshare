@@ -9,6 +9,7 @@ const orderSchema = new mongoose.Schema({
     country: String,
     paymentMethod: String,
     productsBought: [{type: mongoose.Schema.Types.ObjectId, ref: "Product"}],
+    buyer: {type: mongoose.Schema.Types.ObjectId, ref: "User"}
   }, {
     timestamps: true
   });
