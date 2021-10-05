@@ -4,9 +4,9 @@ const productSchema = new mongoose.Schema({
     name: String,
     price: String,
     type: String,
-    model: String,
+    desc: String,
     image: String,
-    ratings: [{type: mongoose.Schema.Types.ObjectId, ref: "Rating"}],
+    ratings: {type: mongoose.Schema.Types.ObjectId, ref: "Rating"},
     user: {type: mongoose.Schema.Types.ObjectId, ref: "User"}
   }, {
     timestamps: true

@@ -41,15 +41,16 @@ async function show(req, res){
 }
 
 function newProduct(req, res){
-    res.render("products/new")
+    res.render("products/new", {title: "New Product"})
     }
 
 
 async function create(req, res ){
     try{
-        const productDocument = await Product.create()
+        const productDocument = await Product.create(req.body)
+        res.redirect(`/products/${productDocument._id}`)
     }catch{
-        res.send(err)
+        next(err);
     }
 
     
