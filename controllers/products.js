@@ -1,4 +1,5 @@
 const Product = require('../models/product');
+const Cart = require('../models/cart')
 // const User = require('../models/user');
 
 
@@ -31,7 +32,7 @@ async function show(req, res){
         console.log(productDocument, "<---show product document");
         res.render('products/show', {
             product: productDocument,
-            title: productDocument.name
+            title: "Product Detail"
         })
 
     }catch(err){
@@ -48,10 +49,11 @@ function newProduct(req, res){
 async function create(req, res ){
     try{
         const productDocument = await Product.create(req.body)
-        res.redirect(`/products/${productDocument._id}`)
+        res.redirect(`/products/new`)
     }catch{
         next(err);
     }
 
     
 }
+

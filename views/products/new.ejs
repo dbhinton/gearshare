@@ -1,12 +1,12 @@
 <%- include('../partials/header') %> 
-<h2 class = "products-title">Featured Products</h2>
+<h2 class = "products-title">Add a Listing</h2>
 
 
 
-<section class = "new-product-form">
+<section class = "add-listing">
 <form action='/products' method = 'POST'>
-<label>Product Name</label> 
-<input type="text" name="name" id="">
+<label>Name of Product:</label> 
+<input type="text" name="name" id=""><br>
 <label for="Type">Type of product:</label>
 <select name="type" id="type">
   <option value="DSLR">DSLR</option>
@@ -15,9 +15,9 @@
   <option value="Drone">Drone</option>
   <option value="Lighting">Lighting</option>
   <option value="Audio">Audio</option>
-</select>
-<label>Price</label>
-<input type="text" name="price" id="price">
+</select><br>
+<label>Price:</label>
+<input type="text" name="price" id="price"><br>
 <label>Description</label>
 <input type="text" id="desc" name="desc" style="width: 200px; height:100px;">
 <!-- <label for="img">Upload Image:</label>

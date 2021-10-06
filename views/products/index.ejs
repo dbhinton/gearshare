@@ -1,63 +1,26 @@
 <%- include('../partials/header') %> 
 
-<h2 class = "products-title">Featured Products</h2>
+<h2 class = "products-title">Available Listings</h2>
+<table class = 'product-table'>
+    <thead>
+        <th></th>
+        <th id = "product-table-name">Name</th>
+        <th id = "product-table-price">Price</th>
+    </thead>
+</table>
 
 
-<section class = "featured-products">
+</section class = "all-products">
     <% products.forEach(product => { %>
-        <div class = "featured-product-item">
+        <div class = "all-product-item">
             <div style = "background-image: url('/public/images/hybrid.png')" class = "featured-product-item-image"></div>
             <p class="title"><%= product.name %> </p>
             <p class = "price">$<%= product.price %> </p>
-            <button>View item</button>
+            <a href="/products/<%= product._id %> "><button>View Item</button></a>
         </div>
      
     <% }) %>
-    <!-- <div class = "featured-product-item">
-        <div style = "background-image: url('/public/images/hybrid.png')" class = "featured-product-item-image"></div>
-        <p class="title">Canon 5D Mark IV</p>
-        <p class = "desc">Newest version of canon camera</p>
-        <p class = "price">$9.99</p>
-        <button>View item</button>
-    </div>
-    <div class = "featured-product-item">
-        <div style = "background-image: url('/public/images/hybrid.png')" class = "featured-product-item-image"></div>
-        <p class="title">Canon 5D Mark IV</p>
-        <p class = "desc">Newest version of canon camera</p>
-        <p class = "price">$9.99</p>
-        <button>View item</button>
-    </div>
-    <div class = "featured-product-item">
-        <div style = "background-image: url('/public/images/hybrid.png')" class = "featured-product-item-image"></div>
-        <p class="title">Canon 5D Mark IV</p>
-        <p class = "desc">Newest version of canon camera</p>
-        <p class = "price">$9.99</p>
-        <button>View item</button>
-    </div> -->
-
 </section>
 
-<!-- <table id = list>
-    <thead>
-        <tr>
-            <th>Name</th>
-            <th>Type</th>
-            <th>Model</th>
-            <th>Price</th>
-        </tr>
-        <tbody>
-            <% products.forEach(function(product){ %>
-             
-            <tr>
-                <td><%= product.name %></td>
-                <td><%= product.type %></td>
-                <td><%= product.model %></td>
-                <td><%= product.price %></td>
-
-            </tr>
-            <% }); %>
-        </tbody>
-    </thead>
-</table> -->
 
 <%- include('../partials/footer') %> 

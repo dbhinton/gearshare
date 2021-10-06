@@ -70,7 +70,7 @@ header{
 
 .fa-shopping-cart{
   color: white;
-  border: 3px solid rgb(59, 56, 56);
+  border: 3px solid white;
   padding: 10px;
   border-radius: 10px;
 
@@ -231,6 +231,55 @@ a{
   background-position: center;
 }
 
+/* All products */
+
+.all-products-title{
+  margin-top: 5%;
+  font-size: 2rem;
+}
+
+.all-products{
+  padding-top: 5px;
+}
+
+.all-product-item{
+  margin-top: 5%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 5px;
+  border-radius: 5px;
+  overflow:hidden;
+  box-sizing: border-box;
+  text-align: center;
+  padding: 2%;
+}
+
+.all-product-item > .title{
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.all-product-item > .desc{
+  color: grey;
+}
+
+.all-product-item > .price{
+  font-style: italic;
+}
+
+
+.all-product-item-image{
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+}
+
+.product-table{
+  margin-left: 9%;
+  font-size: 1.4rem;
+}
 
 div > button{
   outline: none;
@@ -277,8 +326,115 @@ div > button{
     grid-template-columns: 1fr
   }
 }
-
+/* New Products */
 .new-product{
   margin-top: 5%;
   font-size: 2rem;
+}
+
+.add-listing{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Product Detail */
+#product-detail{
+  margin-top: 10rem;
+  max-width: 400px;
+  display: grid;
+  margin: 0 auto;
+  margin-top: 9%;
+}
+
+.product-detail-item{
+  border-radius: 5px;
+  overflow:hidden;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.product-detail-item > .title{
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.product-detail-item > .desc{
+  color: grey;
+}
+
+.product-detail-item > .price{
+  font-style: italic;
+}
+
+
+.product-detail-item-image{
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Style inputs */
+input[type=text], select {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* Style the submit button */
+input[type=submit] {
+  width: 50%;
+  background-color: black;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Add a background color to the submit button on mouse-over */
+input[type=submit]:hover {
+  background-color: var(--clr-primary);
+}
+
+/* Checkout Page */
+.checkout{
+
+}
+.cart-items{
+  margin: 80px auto;
+}
+
+/* Reviews */
+#review-form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#reviews{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5%;
+  padding: 2% 5%;
+}
+
+table{
+  border-collapse: separate;
+  border-spacing: 50px 0;
+}
+
+th{
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+td {
+  padding: 10px 0;
 }
