@@ -28,6 +28,7 @@
     <option value="4">4</option>
     <option value="5" selected>5</option>
   </select>
+
   <input type="submit" value="Add Review" />
 </form>
 <br><br>
@@ -49,20 +50,24 @@
       <% product.reviews.forEach(function(r) { %>
         <tr>
           <td><%= r.createdAt.toLocaleDateString() %></td>
-          <td><input class = "reviews-content" type="text" value = "<%= r.content %> " name="" id=""></td>
-          <td><%= r.rating %></td>
+            <form method="POST" action="/products/<%= product._id %>/reviews/<%= r._id %>?_method=PUT">
+              <td>
+                <input class="reviews-content" type="text" value="<%= r.content %>" name="content" id="">
+              </td>
+              <td>  
+                <%= r.rating %>
+              </td>
         </tr>
         <tr>
+            <td>
+              <button type="submit">Edit</button>
+              </form>
+            </td>
           <td>
-            <form method = "POST" action="/products/<%= product._id %>/reviews/<%= r._id %>?_method=DELETE">
-              <button type = "submit">Delete</button>
-          </form>
-        </td>
-        <td>
-          <form method = "POST" action="/products/<%= product._id %>/reviews/<%= r._id %>?_method=PUT">
-            <button type = "submit">Edit</button>
-        </form>
-      </td>
+            <form method="POST" action="/products/<%= product._id %>/reviews/<%= r._id %>?_method=DELETE">
+              <button type="submit">Delete</button>
+            </form>
+          </td>
         </tr>
       <% }); %>
     </tbody>

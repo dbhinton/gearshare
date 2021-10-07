@@ -49,7 +49,7 @@ function newProduct(req, res){
 
 async function create(req, res ){
     try{
-        const productDocument = await Product.create(req.body)
+        await Product.create(req.body)
         res.redirect(`/products/new`)
     }catch{
         next(err);
