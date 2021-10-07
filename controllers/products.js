@@ -7,7 +7,8 @@ module.exports = {
     index,
     new: newProduct,
     create,
-    show
+    show,
+    update
 }
 
 
@@ -57,3 +58,15 @@ async function create(req, res ){
     
 }
 
+function update(req, res) {
+    Product.findById(req.params.id)
+    .then(product => {
+      res.redirect("products/index", {
+        product
+      })
+    })
+    .catch(err => {
+      console.log(err)
+      res.redirect("products/index")
+    })
+  }

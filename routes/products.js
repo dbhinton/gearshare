@@ -6,6 +6,7 @@ router.get('/products', productsCtrl.index)
 router.get('/products/new', productsCtrl.new);
 router.get('/products/:id', productsCtrl.show);
 router.post('/products', productsCtrl.create);
+router.put('/products/:id', productsCtrl.update);
 
 
 
