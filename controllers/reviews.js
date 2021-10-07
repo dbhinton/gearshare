@@ -3,7 +3,7 @@ const Review = require('../models/review')
 
 module.exports = {
     create,
-    update,
+    updateReview,
     deleteReview
 }
 
@@ -25,16 +25,16 @@ async function create(req,res){
     }
 }
 
-// async function update(req, res){
-//     Product.findById(req.params.pid, function(err, product){
-//         console.log(product.reviews.id(req.params.rid), "<---prod reviews id req params review")
-//         product.reviews.id(req.params.rid).create()
-//         product.save(function(e){
-//             res.redirect(`/products/${req.params.pid}`)
-//         })
+async function updateReview(req, res){
+    Product.findById(req.params.pid, function(err, product){
+        console.log(product.reviews.id(req.params.rid), "<---prod reviews id req params review")
+        product.reviews.id(req.params.rid).create()
+        product.save(function(e){
+            res.redirect(`/products/${req.params.pid}`)
+        })
         
-//     })
-// }
+    })
+}
 
 function deleteReview(req, res){
     console.log("running delete review")
@@ -54,21 +54,21 @@ function deleteReview(req, res){
 
 }
 
-function update(req, res) {
-    // Note the cool "dot" syntax to query on the property of a subdoc
-    Product.findOne({'reviews.r_id': req.params.id}, function(err, product) {
-      // Find the comment subdoc using the id method on Mongoose arrays
-      // https://mongoosejs.com/docs/subdocs.html
-      const reviewSubdoc = product.reviews.id(req.params.id);
-      console.log(reviewSubdoc, "<____---")
-      // Ensure that the comment was created by the logged in user
-    //   if (!reviewSubdoc.user._id.equals(req.user._id)) return res.redirect(`/products/${product._pid}`);
-      // Update the text of the comment
-      reviewSubdoc.text = req.body.text;
-      // Save the updated product
-      product.save(function(err) {
-        // Redirect back to the product's show view
-        res.redirect(`/products/${product._pid}`);
-      });
-    });
-  }
+// function update(req, res) {
+//     // Note the cool "dot" syntax to query on the property of a subdoc
+//     Product.findOne({'reviews.r_id': req.params.id}, function(err, product) {
+//       // Find the comment subdoc using the id method on Mongoose arrays
+//       // https://mongoosejs.com/docs/subdocs.html
+//       const reviewSubdoc = product.reviews.id(req.params.id);
+//       console.log(reviewSubdoc, "<____---")
+//       // Ensure that the comment was created by the logged in user
+//     //   if (!reviewSubdoc.user._id.equals(req.user._id)) return res.redirect(`/products/${product._pid}`);
+//       // Update the text of the comment
+//       reviewSubdoc.text = req.body.text;
+//       // Save the updated product
+//       product.save(function(err) {
+//         // Redirect back to the product's show view
+//         res.redirect(`/products/${product._pid}`);
+//       });
+//     });
+//   }

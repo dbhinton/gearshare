@@ -59,8 +59,8 @@ async function create(req, res ){
 }
 
 function update(req, res) {
-    Product.findById(req.params.id)
-    .then(product => {
+    Product.findOneAndUpdate(req.params.id)
+    .then(products => {
       res.redirect("products/index", {
         product
       })
