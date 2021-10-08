@@ -6,6 +6,7 @@
 
 
 ### WireFrame
+![alt text](https://i.imgur.com/DmmxaXY.png)
 ![alt text](https://i.imgur.com/nobnG2H.jpg)
 
 
