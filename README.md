@@ -1,3 +1,23 @@
+# GearShare
+### GearShare is an e-commerce web application consisting of a 2 sided market where buyers and sellers exchange goods. The inspiration actually came from my friend,  who's a multidisciplinary artist( Music Producer, 3D Animator, and Graphic Designer) created the idea. I was impressed with the idea of expereimentation without long term commitment and developed a strong desire to bring it to life. 
+## Planning:
+### ERD
+![alt text](https://i.imgur.com/bVQDQOs.png)
+
+
+### WireFrame
+![alt text](https://i.imgur.com/nobnG2H.jpg)
+
+
+## Link to Web App
+[Link to Web App](https://gearshare-app.herokuapp.com/)<br />
+### Tech used: HTML, CSS, JS
+### Future Enhancements: 
+* Add Buyer, Seller, Cart Functionality
+* Fix CSS
+* 
+
+
 # passport-boilerplate
 
 
