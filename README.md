@@ -13,7 +13,7 @@
 
 ## Link to Web App
 ### [GearShare](https://gearshare-app.herokuapp.com/)<br />
-### Tech used: HTML, CSS, JS
+### Tech used: MongoDB, Node.js, Express.js EJS, CSS, Photoshop
 ### Future Enhancements: 
 * Add Buyer, Seller, Cart Functionality
 * Fix CSS
