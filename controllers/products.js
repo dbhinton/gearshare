@@ -33,7 +33,8 @@ async function show(req, res){
         console.log(productDocument, "<---show product document");
         res.render('products/show', {
             product: productDocument,
-            title: "Product Detail"
+            title: "Product Detail",
+            user: req.user
         })
 
     }catch(err){
@@ -49,10 +50,11 @@ function newProduct(req, res){
 
 async function create(req, res ){
     try{
+        req.body.user = req.user._id
         await Product.create(req.body)
         res.redirect(`/products/new`)
     }catch{
-        next(err);
+        next();
     }
 
     

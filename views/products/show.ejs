@@ -50,6 +50,8 @@
       <% product.reviews.forEach(function(r) { %>
         <tr>
           <td><%= r.createdAt.toLocaleDateString() %></td>
+          <% if (user) { %>
+          <% if (user._id.toString() == product.user.toString()) { %>
             <form method="POST" action="/products/<%= product._id %>/reviews/<%= r._id %>?_method=PUT">
               <td>
                 <input class="reviews-content" type="text" value="<%= r.content %>" name="content" id="">
@@ -62,11 +64,20 @@
             <td>
               <button type="submit">Edit</button>
               </form>
+              <% } %>
+               <% } %>
             </td>
           <td>
-            <form method="POST" action="/products/<%= product._id %>/reviews/<%= r._id %>?_method=DELETE">
-              <button type="submit">Delete</button>
-            </form>
+            <% if (user) { %>
+             
+             <% if (user._id.toString() == product.user.toString()) { %>
+              <form method="POST" action="/products/<%= product._id %>/reviews/<%= r._id %>?_method=DELETE">
+                <button type="submit">Delete</button>
+              </form>
+              <% } %>
+              <% } %>
+             
+
           </td>
         </tr>
       <% }); %>
