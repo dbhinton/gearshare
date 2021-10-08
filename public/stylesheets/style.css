@@ -290,8 +290,16 @@ a{
 }
 
 .product-table{
-  margin-left: 9%;
+  margin-left: 50%;
   font-size: 1.4rem;
+}
+
+#product-table-name{
+  margin-right: 27%;
+}
+
+#product-table-price{
+  margin-right: 30%;
 }
 
 div > button{
