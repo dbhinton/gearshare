@@ -1,4 +1,4 @@
-# GearShare
+# ![alt text](https://i.imgur.com/sMBXD2A.png)
 ### GearShare is an e-commerce web application consisting of a 2 sided market where buyers and sellers exchange goods. The inspiration actually came from my friend [Rohan](https://www.instagram.com/rohan.jpg/),  who's a multidisciplinary artist( Music Producer, 3D Animator, and Graphic Designer) created the idea. I was impressed with the idea of expereimentation without long term commitment and developed a strong desire to bring it to life. 
 ## Planning:
 ### [Trello](https://trello.com/b/4LwTrnYk/gearshare)<br />
@@ -13,11 +13,12 @@
 
 ## Link to Web App
 ### [GearShare](https://gearshare-app.herokuapp.com/)<br />
-### Tech used: MongoDB, Node.js, Express.js EJS, CSS, Photoshop
+### Tech used: MongoDB, Node.js, Express.js, Mongoose, EJS, CSS, Heroku, Photoshop
 ### Future Enhancements: 
 * Add Buyer, Seller, Cart Functionality
 * Fix CSS
 * Fix Reviews
+* Ability to Accept Payments
 
 
 # passport-boilerplate
