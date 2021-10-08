@@ -36,7 +36,6 @@ async function show(req, res){
             title: "Product Detail",
             user: req.user
         })
-
     }catch(err){
         res.send(err)
     }
